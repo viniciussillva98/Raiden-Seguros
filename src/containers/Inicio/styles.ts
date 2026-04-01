@@ -19,6 +19,10 @@ export const Container = styled.div`
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6); /* Cor de sobreposição com opacidade */
         z-index: 1; /* Garante que a sobreposição fique acima da imagem */
+
+            @media screen and (max-width: 768px) {
+                 height: 100vh;
+  }
     }
 
     @media screen and (max-width: 768px) {
