@@ -175,4 +175,28 @@ export const TextFooter = styled.p`
     text-align: center;
     font-size: 14px;
     font-weight: normal;
+
+    a{
+         color: #333333;
+         text-decoration: none;
+         position: relative;
+
+             &::after{
+        content:"";
+        position: absolute;
+        height: 1px;
+        width:  0px;
+        background-color: #1ec72f;
+        bottom: 1px;
+        left: 0;
+        transition: width 0.2s ease;
+    }
+
+        &:hover:after{
+            width: 100%;
+        }   
+        &:hover {
+            color: #1fa62d;
+        }   
+    }
 `;

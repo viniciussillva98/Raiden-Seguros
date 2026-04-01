@@ -44,7 +44,7 @@ export default function Home() {
                 <Parceiros />
                 <Contato onNavigate={handleNavigate} ref={contatoRef} />
                 <WhatsappLink />
-                <Footer />
+                <Footer onNavigate={handleNavigate} />
             </>
         </>
     );

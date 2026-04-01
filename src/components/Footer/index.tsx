@@ -1,6 +1,12 @@
+import { forwardRef } from "react";
 import logoRaiden from "../../assets/logoRaiden.png";
 import { ContainerContato, ContainerFooter, ContainerLeft, ContainerRight, ContentFooter, FooterAll, HeaderFooter, Image, TerxtHeader, TextContato, TextFooter, TextLeft, TitleLeft, TitleRight } from "./styles";
-function Footer() {
+
+type NavegarProps = {
+    onNavigate: (section: string) => void;
+};
+
+const Footer = forwardRef<HTMLDivElement, NavegarProps>(({ onNavigate }) => {
 
     return (
         <ContainerFooter>
@@ -10,7 +16,7 @@ function Footer() {
 
             <ContentFooter>
                 <ContainerLeft>
-                    <Image src={logoRaiden} alt="Logo Raiden" />
+                    <Image src={logoRaiden} alt="Logo Raiden" onClick={() => onNavigate('inicio')}/>
                     <TitleLeft>Raiden Corretora de Seguros Ltda</TitleLeft>
                     <TextLeft>Entre em contato conosco hoje mesmo para descobrir como podemos  <br /> ajudar a garantir sua segurança e tranquilidade.</TextLeft>
                 </ContainerLeft>
@@ -25,10 +31,11 @@ function Footer() {
             </ContentFooter>
 
             <FooterAll>
-                <TextFooter>© 2026 Raiden Seguros, 00.907.672/0001-91 - Todos os direitos reservados.<br />Desenvolvido por Vinícius Silva</TextFooter>
+                <TextFooter>© 2026 Raiden Seguros, 00.907.672/0001-91 - Todos os direitos reservados.<br />
+                    Desenvolvido por <a href="https://www.linkedin.com/in/viniciusillva/">Vinícius Silva</a></TextFooter>
             </FooterAll>
         </ContainerFooter>
-    )
-}
+    );
+});
 
 export default Footer
