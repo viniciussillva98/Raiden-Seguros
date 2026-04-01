@@ -1,6 +1,6 @@
 import { TextAlignJustify } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import logo from "../../assets/LogoRaiden.png";
+import logo from "../../assets/logoRaiden.png";
 import { Buttons, Container, IconButton, Nav, Ul } from "./styles";
 
 
