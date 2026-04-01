@@ -28,7 +28,7 @@ export const Container = styled.div`
     @media screen and (max-width: 768px) {
         background-image: url(${bannerMobile});
         padding: 25px;
-        background-size: cover;
+        background-size: initial;
   }
 
 `;
